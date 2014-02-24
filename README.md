@@ -10,6 +10,8 @@ Install [Ansible](http://www.ansible.com/home) and [Vagrant](http://www.vagrantu
 
 ## Usage with AWS
 
+Obtain an [AWS](http://aws.amazon.com) account.  
+
 Set up AWS environment variables as follows:
 
     export AWS_ACCESS_KEY_ID="XXXXXXXXXXXXXXXXXXXX"    
@@ -30,6 +32,8 @@ Destroy the VM when done:
     vagrant destroy
 
 ## Usage with VirtualBox
+
+Install [VirtualBox](https://www.virtualbox.org).
 
 Run Vagrant:
 
