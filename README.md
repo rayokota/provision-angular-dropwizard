@@ -2,7 +2,7 @@
 
 An [Ansible](http://www.ansible.com/home) provisioner for [AngularJS](http://angularjs.org) and [Dropwizard](http://dropwizard.codahale.com).
 
-This provisioner installs the [Angular-Dropwizard generator](https://github.com/rayokota/generator-angular-dropwizard) and all prerequisites.  Currently it only supports Ubuntu 12.0.4.
+This provisioner installs the [Angular-Dropwizard generator](https://github.com/rayokota/generator-angular-dropwizard) and all prerequisites.  Currently it only supports Ubuntu 12.04.
 
 ## Usage with AWS
 
