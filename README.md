@@ -4,6 +4,10 @@ An [Ansible](http://www.ansible.com/home) provisioner for [AngularJS](http://ang
 
 This provisioner installs the [Angular-Dropwizard generator](https://github.com/rayokota/generator-angular-dropwizard) and all prerequisites.  Currently it only supports Ubuntu 12.04.
 
+## Installation
+
+Install [Ansible](http://www.ansible.com/home) and [Vagrant](http://www.vagrantup.com).
+
 ## Usage with AWS
 
 Set up AWS environment variables as follows:
