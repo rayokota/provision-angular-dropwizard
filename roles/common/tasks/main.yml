@@ -1,0 +1,25 @@
+---
+- name: Upgrade apt packages
+  apt: upgrade=yes
+       update_cache=yes
+
+- name: Install git
+  apt: pkg=git
+
+- name: Install Vim
+  apt: pkg=vim
+
+- name: Install python-software-properties so the apt_repository module will work properly
+  apt: pkg=python-software-properties
+
+- name: Add chris-lea PPA for node.js
+  apt_repository: repo=ppa:chris-lea/node.js
+
+- name: Update apt cache
+  apt: update_cache=yes
+ 
+- name: Install node.js
+  apt: pkg=nodejs
+
+#- name: Create node.js symlink
+#  shell: ln -s /usr/bin/nodejs /usr/bin/node

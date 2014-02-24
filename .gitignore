@@ -1,0 +1,4 @@
+.vagrant
+ansible_hosts
+vagrant_ansible_inventory_default
+Vagrantfile

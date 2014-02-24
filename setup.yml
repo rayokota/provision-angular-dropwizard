@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  sudo: true
+
+  roles:
+    - common
+    - java7
+    - generator
