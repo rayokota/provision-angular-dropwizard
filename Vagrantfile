@@ -2,22 +2,6 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  # Every Vagrant virtual environment requires a box to build off of.
-  #config.vm.box = "precise64"
-
-  # The url from where the 'config.vm.box' box will be fetched if it
-  # doesn't already exist on the user's system.
-  #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-
-  # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine. In the example below,
-  # accessing "localhost:8080" will access port 80 on the guest machine.
-  #config.vm.network :forwarded_port, guest: 80, host: 8080
-
-  # Create a private network, which allows host-only access to the machine
-  # using a specific IP. This IP is used in the example Ansible inventory file.
-  #config.vm.network :private_network, ip: "192.168.222.111"
-
   # For information on available options for Ansible provisioning, please visit:
   # http://docs.vagrantup.com/v2/provisioning/ansible.html
   config.vm.provision :ansible do |ansible|
@@ -42,7 +26,6 @@ Vagrant.configure("2") do |config|
     aws.access_key_id = ENV['AWS_ACCESS_KEY_ID']
     aws.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
     # ubuntu AMI
-    #aws.ami = "ami-ad184ac4"
     aws.ami = "ami-a73264ce"
     aws.instance_type = "t1.micro"
     aws.keypair_name = ENV['AWS_KEYPAIR_NAME']
