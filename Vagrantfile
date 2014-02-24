@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
     override.ssh.username = "vagrant"
     override.vm.box = "precise64"
     override.vm.box_url = "http://files.vagrantup.com/precise64.box"
-    override.vm.network :forwarded_port, guest: 80, host: 3000
+    override.vm.network :forwarded_port, guest: 80, host: 8080
     #override.vm.network :private_network, ip: "192.168.222.111"
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
