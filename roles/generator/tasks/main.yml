@@ -24,3 +24,16 @@
   shell: cd /tmp/testapp; /tmp/generate_entity.exp
   sudo: false
   when: generate_testapp|bool
+
+- name: Build application
+  shell: cd /tmp/testapp; mvn compile 
+  sudo: false
+  when: generate_testapp|bool
+
+- name: Run application
+  shell: cd /tmp/testapp; nohup mvn exec:exec -pl yourapp-service >app.log 2>&1 &
+  sudo: false
+  when: generate_testapp|bool
+  async: 10
+  poll: 0
+

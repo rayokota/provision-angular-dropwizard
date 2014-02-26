@@ -17,7 +17,7 @@
 # this in the first place.  The -C flag allows you to define a
 # character to toggle this mode off and on.
 
-set force_conservative 0  ;# set to 1 to force conservative mode even if
+set force_conservative 1  ;# set to 1 to force conservative mode even if
 			  ;# script wasn't run conservatively originally
 if {$force_conservative} {
 	set send_slow {1 .1}
@@ -43,7 +43,7 @@ if {$force_conservative} {
 
 
 set timeout -1
-spawn yo angular-dropwizard:entity myentity --force
+spawn yo angular-dropwizard:entity yourentity --force
 match_max 100000
 expect "*name*"
 send -- "\r"
