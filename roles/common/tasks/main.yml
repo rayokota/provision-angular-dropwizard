@@ -6,7 +6,7 @@
 - name: Install git
   apt: pkg=git
 
-- name: Install expect
+- name: Install Expect
   apt: pkg=expect
 
 - name: Install Vim
