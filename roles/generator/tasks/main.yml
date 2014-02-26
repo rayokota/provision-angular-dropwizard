@@ -6,3 +6,19 @@
 - name: Install Angular-Dropwizard Generator
   npm: name=generator-angular-dropwizard
        global=yes
+
+- name: Copy application expect script
+  copy: src=generate_app.exp dest=/tmp/generate_app.exp
+  sudo: false
+
+- name: Generate application
+  shell: mkdir /tmp/testapp; cd /tmp/testapp; /tmp/generate_app.exp
+  sudo: false
+
+- name: Copy entity expect script
+  copy: src=generate_entity.exp dest=/tmp/generate_entity.exp
+  sudo: false
+
+- name: Generate entity
+  shell: cd /tmp/testapp; /tmp/generate_entity.exp
+  sudo: false

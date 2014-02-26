@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
     ansible.playbook = "setup.yml"
     #ansible.inventory_path = "ansible_hosts"
     ansible.verbose = "vvv"
+    ansible.extra_vars = "ansible_extra_vars.yml" if File.exist? "ansible_extra_vars.yml"
   end
 
   # For information on available options for the Virtualbox provider, please visit:
@@ -16,7 +17,10 @@ Vagrant.configure("2") do |config|
     override.ssh.username = "vagrant"
     override.vm.box = "precise64"
     override.vm.box_url = "http://files.vagrantup.com/precise64.box"
-    override.vm.network :forwarded_port, guest: 80, host: 8080
+    override.vm.network :forwarded_port, guest: 3000, host: 3000
+    override.vm.network :forwarded_port, guest: 5000, host: 5000
+    override.vm.network :forwarded_port, guest: 8080, host: 8080
+    override.vm.network :forwarded_port, guest: 9292, host: 9292
     #override.vm.network :private_network, ip: "192.168.222.111"
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
