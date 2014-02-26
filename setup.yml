@@ -7,3 +7,4 @@
     - common
     - java7
     - generator
+    - { role: generate_testapp, when: "generate_testapp is defined and generate_testapp|bool" }

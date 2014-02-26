@@ -25,4 +25,4 @@
   apt: pkg=nodejs
 
 #- name: Create node.js symlink
-#  shell: ln -s /usr/bin/nodejs /usr/bin/node
+#  command: ln -s /usr/bin/nodejs /usr/bin/node
