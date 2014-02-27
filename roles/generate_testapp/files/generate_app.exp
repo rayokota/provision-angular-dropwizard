@@ -47,8 +47,8 @@ spawn yo angular-dropwizard
 match_max 100000
 expect "*yeoman*"
 send -- "n\r"
-expect "*base name*"
+expect "*name*"
 send -- "yourapp\r"
-expect "*default package*"
+expect "*package*"
 send -- "com.yourcompany.yourapp\r"
 expect eof

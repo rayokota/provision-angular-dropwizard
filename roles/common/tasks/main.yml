@@ -1,4 +1,8 @@
 ---
+- name: Create 1GB swap file
+  shell: dd if=/dev/zero of=/swapfile bs=1M count=1024; mkswap /swapfile; swapon /swapfile
+  when: ansible_domain == "ec2.internal"
+
 - name: Upgrade apt packages
   apt: upgrade=yes
        update_cache=yes
@@ -11,6 +15,9 @@
 
 - name: Install Vim
   apt: pkg=vim
+
+- name: Install SQLite3
+  apt: pkg=sqlite3
 
 - name: Install python-software-properties so the apt_repository module will work properly
   apt: pkg=python-software-properties
