@@ -30,6 +30,3 @@
  
 - name: Install node.js
   apt: pkg=nodejs
-
-#- name: Create node.js symlink
-#  command: ln -s /usr/bin/nodejs /usr/bin/node

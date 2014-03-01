@@ -8,7 +8,7 @@
   sudo: false
 
 - name: Make application folder
-  command: mkdir /tmp/testapp
+  file: path=/tmp/testapp state=directory
   sudo: false
 
 - name: Generate application
